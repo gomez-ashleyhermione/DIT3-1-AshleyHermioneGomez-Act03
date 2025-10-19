@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_background"
+    tools:context=".MainActivity">
+
+    <!-- Header Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/headerCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <!-- Profile Picture -->
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/profile_picture_description"
+                android:src="@drawable/ic_profile_placeholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/purple_primary" />
+
+            <!-- User Name -->
+            <TextView
+                android:id="@+id/userName"
+                style="@style/ProfileNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/user_name"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileImage" />
+
+            <!-- User Bio Label -->
+            <TextView
+                android:id="@+id/bioLabel"
+                style="@style/SectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/bio_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userName" />
+
+            <!-- User Bio -->
+            <TextView
+                android:id="@+id/userBio"
+                style="@style/BioText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/user_bio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bioLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Edit Profile Button -->
+    <Button
+        android:id="@+id/editButton"
+        style="@style/EditButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/edit_profile_button"
+        android:textColor="@color/white"
+        app:icon="@android:drawable/ic_menu_edit"
+        app:iconGravity="textStart"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerCard" />
+
+    <!-- Additional Info Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/infoCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editButton">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Email Section -->
+            <TextView
+                style="@style/SectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_label" />
+
+            <TextView
+                android:id="@+id/userEmail"
+                style="@style/BioText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/user_email"
+                android:textColor="@color/text_primary" />
+
+            <!-- Location Section -->
+            <TextView
+                style="@style/SectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/location_label" />
+
+            <TextView
+                android:id="@+id/userLocation"
+                style="@style/BioText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/user_location"
+                android:textColor="@color/text_primary" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

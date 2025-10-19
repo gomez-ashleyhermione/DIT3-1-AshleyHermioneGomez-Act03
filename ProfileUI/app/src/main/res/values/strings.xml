@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ProfileUI</string>
+
+    <!-- Profile Screen Strings -->
+    <string name="profile_picture_description">User profile picture</string>
+    <string name="user_name">Ashley Hermione C. Gomez</string>
+    <string name="bio_label">About</string>
+    <string name="user_bio">Loves ice creams</string>
+    <string name="edit_profile_button">Edit Profile</string>
+    <string name="email_label">Email</string>
+    <string name="user_email">hermionegomez49@gmail.com</string>
+    <string name="location_label">Location</string>
+    <string name="user_location">Lower Bicutan, Taguig City</string>
+</resources>

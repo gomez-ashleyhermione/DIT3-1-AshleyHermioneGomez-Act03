@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Calm Purple Theme -->
+    <color name="purple_primary">#9575CD</color>
+    <color name="purple_primary_dark">#7E57C2</color>
+    <color name="purple_accent">#B39DDB</color>
+    <color name="purple_light">#EDE7F6</color>
+    <color name="purple_background">#F3F0F9</color>
+
+    <color name="text_primary">#2C1A4D</color>
+    <color name="text_secondary">#6A5A8C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
